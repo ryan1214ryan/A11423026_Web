@@ -1,12 +1,10 @@
-/* style.css */
+
 :root {
-    /* 預設顏色 (首頁) */
-    --theme-color: #00a8ff; /* 海洋藍 */
-    --nav-bg: #f8e71c;    /* 經典黃 */
-    --text-color: #8b572a; /* 巧克力棕 */
+    --theme-color: #00a8ff; 
+    --nav-bg: #f8e71c;   
+    --text-color: #8b572a; 
 }
 
-/* 角色色系定義 */
 body.spongebob-theme { --theme-color: #f8e71c; --nav-bg: #ffeb3b; --text-color: #8b572a; }
 body.patrick-theme   { --theme-color: #ff9a9e; --nav-bg: #ffcbd1; --text-color: #d84315; }
 body.squidward-theme { --theme-color: #7fcdff; --nav-bg: #b3e5fc; --text-color: #006064; }
@@ -15,10 +13,9 @@ body.mrkrabs-theme   { --theme-color: #ff5252; --nav-bg: #ff8a80; --text-color: 
 body {
     margin: 0;
     font-family: 'Microsoft JhengHei', sans-serif;
-    /* 背景會隨主題色變動 */
     background: linear-gradient(to bottom, var(--theme-color) 0%, #ffffff 100%);
     min-height: 100vh;
-    transition: background 0.5s ease; /* 增加切換時的平滑感 */
+    transition: background 0.5s ease; 
 }
 
 nav {
@@ -32,7 +29,6 @@ nav {
     z-index: 1000;
 }
 
-/* 修改 style.css 中的導覽列按鈕樣式 */
 
 nav a {
     text-decoration: none;
@@ -41,27 +37,24 @@ nav a {
     margin: 0 10px;
     padding: 10px 20px;
     border-radius: 25px;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* 增加彈性動畫感 */
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     display: inline-block;
 }
 
-/* 滑鼠指到時的效果 (Hover) */
 nav a:hover {
-    background-color: white; /* 變成白色底 */
-    color: var(--theme-color); /* 文字變成該頁面的主題色 */
-    transform: scale(1.2) translateY(-2px); /* 放大並輕微向上浮動 */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* 增加陰影讓它像浮起來 */
+    background-color: white;
+    color: var(--theme-color); 
+    transform: scale(1.2) translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
 }
 
-/* 點擊當前頁面的效果 (Active) */
 nav a.active {
     background-color: var(--text-color);
     color: white;
     box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* 選配：滑鼠指到時增加一個小符號 (例如波浪) */
 nav a:hover::after {
     content: '🫧';
     position: absolute;
